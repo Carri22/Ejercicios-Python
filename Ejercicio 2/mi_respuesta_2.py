@@ -20,10 +20,8 @@ import math
 def dig_pow(n, p):
     # your code
     lista=[int(x) for x in str(n)]
-    flag = True
     elevado = 0
     for i in lista:
-        elevado += (math.pow(i,p) if flag == True else math.pow(i,p))
+        elevado += i**p
         p+=1
-        flag = False
     return elevado/n if elevado%n==0 else -1

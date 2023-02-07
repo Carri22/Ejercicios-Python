@@ -11,21 +11,5 @@ Ejemplo
 "aA11" -> 2 # 'a' and '1'
 "ABBA" -> 2 # 'A' and 'B' each occur twice
 '''
-
-def duplicate_count(text):
-    # Your code goes here
-
-    text = text.lower()
-    contador = 0
-    alfabeto = {}
-    for l in text:
-        if l in alfabeto:
-            alfabeto[l] += 1
-        else:
-            alfabeto[l] = 1
-            
-    for i in alfabeto:
-        if alfabeto[i] > 1:
-            contador+=1
-    
-    return contador
+def duplicate_count(s):
+  return len([c for c in set(s.lower()) if s.lower().count(c)>1])
