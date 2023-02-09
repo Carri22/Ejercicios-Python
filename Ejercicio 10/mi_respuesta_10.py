@@ -5,7 +5,6 @@ def narcissistic( value ):
     suma = 0
     for num in mapped_numbers:
         suma+=num
-    print(suma)
     return True if suma == value else False
     
 
